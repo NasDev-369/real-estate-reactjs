@@ -1,0 +1,175 @@
+@import "../../style/mixins.scss";
+
+.global {
+	padding-block: 5rem;
+
+	&__header {
+		text-align: center;
+	}
+
+	&__content {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1.5rem;
+		@include respond(tab-land) {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 2rem;
+		}
+	}
+
+	h2 {
+		font-size: 1.5rem;
+		font-weight: 700;
+		line-height: 1.3;
+		margin-bottom: 5rem;
+		margin-top: 0;
+		margin-inline: auto;
+		max-width: 750px;
+		max-width: 550px;
+
+		@include respond(tab-port) {
+			font-size: 1.5rem;
+			font-weight: 700;
+		}
+
+		@include respond(tab-land) {
+			font-size: 1.8rem;
+			font-weight: 700;
+		}
+
+		@include respond(desktop) {
+			font-size: 2.75rem;
+			font-weight: 700;
+			max-width: 710px;
+		}
+	}
+
+	h3 {
+		font-size: 1.25rem;
+		font-weight: 700;
+		line-height: 1.3;
+
+		@include respond(tab-port) {
+			font-size: 1.2rem;
+		}
+
+		@include respond(desktop) {
+			font-size: 1.6rem;
+		}
+	}
+
+	p {
+		font-size: 0.875rem;
+		line-height: 1.2rem;
+		margin-block: 1.3rem;
+
+		@include respond(tab-port) {
+			font-size: 1.1rem;
+		}
+	}
+
+	a {
+		font-size: 0.875rem;
+
+		@include respond(tab-port) {
+			font-size: 0.875rem;
+		}
+	}
+
+	&__left .btn--dark {
+		margin-right: 1.2rem;
+	}
+
+	&__stats {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: auto auto;
+		gap: 1rem;
+		text-align: left;
+		margin-top: 3.2rem;
+
+		@include respond(tab-land) {
+			text-align: left;
+			gap: 1rem;
+			margin-top: 8.2rem;
+		}
+
+		p {
+			font-size: 1.25rem;
+			font-weight: 700;
+			grid-row: 1;
+			margin: 0;
+
+			@include respond(tab-port) {
+				font-size: 1.625rem;
+			}
+
+			@include respond(tab-land) {
+				font-size: 1.875rem;
+			}
+		}
+
+		span {
+			font-size: 0.875rem;
+			font-weight: 700;
+			grid-row: 2;
+
+			@include respond(tab-port) {
+				font-size: 1rem;
+			}
+		}
+	}
+	&__right {
+		position: relative;
+
+		@include respond(tab-land) {
+			max-width: 550px;
+			left: 0;
+			right: 0;
+			margin: auto;
+		}
+	}
+
+	&__right::after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: linear-gradient(to left, transparent, rgb(193, 222, 232, 0.5));
+		z-index: 1;
+		top: 0;
+		border-radius: 14px;
+	}
+
+	img {
+		width: 100%;
+		max-width: 100%;
+		position: relative;
+
+		@include respond(desktop) {
+			max-width: 550px;
+			max-height: 577px;
+		}
+	}
+
+	&__countUp {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 0.4rem;
+
+		span {
+			@include respond(tab-port) {
+				font-size: 22px;
+			}
+			@include respond(tab-land) {
+				font-size: 26px;
+			}
+
+			@include respond(desktop) {
+				font-size: 32px;
+			}
+		}
+	}
+}

@@ -1,0 +1,154 @@
+@import "../../style/mixins.scss";
+
+.projects {
+	padding-block: 5rem;
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	&__header {
+		text-align: center;
+	}
+
+	span {
+		display: inline-block;
+		margin-bottom: 0.7rem;
+		text-transform: none;
+		font-style: none;
+		letter-spacing: 1px;
+		font-size: 16px;
+
+		@include respond(tab-land) {
+			margin-bottom: 0.5rem;
+		}
+
+		@include respond(desktop) {
+			font-size: 18px;
+		}
+	}
+
+	h2 {
+		text-transform: capitalize;
+		line-height: 1.5;
+		font-style: none;
+		font-weight: 600;
+		font-size: 1.625rem;
+		letter-spacing: 1px;
+
+		@include respond(tab-land) {
+			font-size: 1.875rem;
+		}
+
+		@include respond(desktop) {
+			font-size: 2.375rem;
+		}
+	}
+
+	h3 {
+		font-size: 1rem;
+		letter-spacing: 1px;
+		font-weight: 900;
+		text-transform: capitalize;
+
+		@include respond(tab-land) {
+			font-size: 1.1rem;
+		}
+		@include respond(desktop) {
+			font-size: 1.3rem;
+		}
+	}
+
+	p {
+		font-size: 1rem;
+		letter-spacing: 1px;
+		line-height: 1.5;
+		text-transform: none;
+		margin-block: 0.7rem;
+		font-weight: 500;
+
+		@include respond(tab-land) {
+			font-size: 1.1rem;
+		}
+		@include respond(desktop) {
+			font-size: 1.1rem;
+		}
+	}
+
+	.slick-next:before {
+		display: none;
+	}
+
+	.slick-next:hover:before {
+		color: black !important;
+	}
+
+	.slick-prev:before {
+		display: none;
+	}
+
+	.slick-prev:hover:before {
+		color: black !important;
+	}
+}
+
+.slick-next {
+	position: absolute;
+	font-family: "Poppins" !important;
+	position: absolute;
+	background: var(--c-white) !important;
+	color: var(--c-black) !important;
+	right: 0 !important;
+	top: 0 !important;
+	border-radius: 50%;
+	width: 34px !important;
+	height: 34px !important;
+	top: -25px !important;
+	transition: all 0.3s ease;
+	display: none !important;
+	padding: 0.4rem !important;
+
+	@include respond(tab-land) {
+		display: block !important;
+	}
+
+	&:hover {
+		background: var(--c-black) !important;
+		color: var(--c-white) !important;
+	}
+}
+
+.slick-prev {
+	position: absolute;
+	font-family: "Poppins" !important;
+	font-size: 34px !important;
+	position: absolute;
+	background: var(--c-white) !important;
+	color: var(--c-black) !important;
+	right: 40px !important;
+	top: 0 !important;
+	border-radius: 50%;
+	width: 34px !important;
+	height: 34px !important;
+	top: -25px !important;
+	left: auto !important;
+	transition: all 0.3s ease;
+	display: none !important;
+	padding: 0.4rem !important;
+
+	@include respond(tab-land) {
+		display: block !important;
+	}
+
+	&:hover {
+		background: var(--c-black) !important;
+		color: var(--c-white) !important;
+	}
+}
+
+.slick-track {
+	display: flex !important;
+	gap: 1rem !important;
+}

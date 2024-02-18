@@ -1,0 +1,28 @@
+//Media query manager
+
+/* 
+0-600  phone
+600-900 Tablet portrait
+900-1200 tablet landscape
+1200-1800 desktop
+*/
+
+@mixin respond($device) {
+	@if $device == tab-port {
+		@media screen and (min-width: 600px) {
+			@content;
+		}
+	} // 900
+
+	@if $device == tab-land {
+		@media screen and (min-width: 900px) {
+			@content;
+		}
+	} //1200
+
+	@if $device == desktop {
+		@media screen and (min-width: 1200px) {
+			@content;
+		}
+	} // 1800
+}

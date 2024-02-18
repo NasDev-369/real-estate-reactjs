@@ -1,0 +1,23 @@
+.rating {
+	&__star {
+		cursor: pointer;
+		transition: color 200ms;
+	}
+
+	input[type="radio"] {
+		display: none; // Hide radio inputs
+	}
+
+	label {
+		cursor: pointer;
+		margin-right: 0.2em;
+		font-size: 24px;
+		transition: all 0.3s ease;
+
+		// Star rating when checked
+		// Star rating when checked
+		input:checked ~ & {
+			color: gold;
+		}
+	}
+}

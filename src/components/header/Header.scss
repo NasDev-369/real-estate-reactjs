@@ -1,0 +1,117 @@
+@import "../../style/mixins.scss";
+
+.header {
+	padding-block: 1.5rem;
+	position: relative;
+
+	&__container {
+	}
+
+	&__bg {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		@include respond(tab-land) {
+			position: relative;
+			background-color: var(--c-gray);
+			display: flex;
+			flex-direction: row;
+			padding: 1rem 2rem;
+			border-radius: 81px;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		@include respond(desktop) {
+			padding: 1rem 4rem;
+		}
+	}
+
+	&__logo img {
+		width: 5rem;
+
+		@include respond(tab-port) {
+			width: 7rem;
+		}
+	}
+
+	ul {
+		display: flex;
+		flex-direction: column;
+		gap: 1.2rem;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		padding: 2rem;
+		background-color: var(--c-gray);
+		width: 100%;
+		display: none;
+		z-index: 99;
+
+		@include respond(tab-land) {
+			flex-direction: row;
+			position: relative;
+			display: flex;
+			width: auto;
+			background-color: var(--c-white);
+			border-radius: 80px;
+			padding: 1rem 1.5rem;
+		}
+	}
+
+	ul li:nth-child(6) {
+		display: none;
+		@include respond(tab-land) {
+			display: block;
+			font-size: 1.5rem;
+		}
+	}
+
+	&__contact {
+		display: none;
+
+		@include respond(tab-land) {
+			display: none;
+			align-items: center;
+			gap: 1rem;
+		}
+
+		@include respond(desktop) {
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+		}
+	}
+
+	&__menu-btn {
+		font-size: 2rem;
+		cursor: pointer;
+
+		@include respond(tab-land) {
+			display: none;
+		}
+	}
+
+	a {
+		color: var(--c-black);
+		text-transform: capitalize;
+		transition: all 0.3s ease;
+
+		&:hover {
+			color: #d5bdaf;
+		}
+
+		@include respond(tab-land) {
+			font-size: 16px;
+		}
+
+		@include respond(desktop) {
+			font-size: 18px;
+		}
+	}
+	.show {
+		display: flex;
+	}
+}
